@@ -1,91 +1,46 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TheJ3niThor says...</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    const messages = [
+      "Project 800A",
+      "Multidimensional Node",
+      "Observation: ACTIVE"
+    ];
+
+    const glitchChars = "!@#$%^&*()_+{}|:<>?-=[];',./~`";
+
+    function glitchText(text, iterations = 10, delay = 100) {
+      let iteration = 0;
+      const originalText = text;
+      const interval = setInterval(() => {
+        let glitched = '';
+        for (let i = 0; i < originalText.length; i++) {
+          if (Math.random() < 0.5) {
+            glitched += glitchChars.charAt(Math.floor(Math.random() * glitchChars.length));
+          } else {
+            glitched += originalText.charAt(i);
+          }
+        }
+        document.title = glitched;
+        iteration++;
+        if (iteration >= iterations) {
+          clearInterval(interval);
+          document.title = originalText;
+        }
+      }, delay);
+    }
+
+    let currentMessage = 0;
+    setInterval(() => {
+      glitchText(messages[currentMessage]);
+      currentMessage = (currentMessage + 1) % messages.length;
+    }, 3000);
+  </script>
 </head>
 <body>
-<a href="#main" class="skip-link">Skippa e STRIPPA!</a>
-<header>
-  <div class="container">
-    <h1>TheJ3niThor diario di guerra</h1>
-    <h2>Qui non so cosa scrivere</h2>
-    <p>
-      Una raccolta di pensieri, trascrizioni e ricordi criptati di un individuo ai margini della società di Carbon 2185.
-      Frammenti di un'esistenza sotto sorveglianza, tra neon, cyberimpianti e un sistema che non perdona.
-    </p>
-  </div>
-</header>
-
-<nav>
-  <ul>
-    <li><a href="#about">Il Progetto</a></li>
-    <li><a href="#formato">Formato</a></li>
-    <li><a href="#contatti">Contatti</a></li>
-    <li><a href="#voci">Voci del Diario</a></li>
-  </ul>
-</nav>
-
-<main id="main" tabIndex="-1">
-  <div class="container">
-    <article id="about">
-      <section>
-        <h2>Il Progetto</h2>
-        <p>
-          Il Diario di TheJ3niThor è un archivio testuale semi-clandestino: flussi di coscienza, log mentali e trascrizioni
-          filtrate da un nodo personale. Ogni entry è un frammento che riflette la deriva psicologica, politica e urbana
-          dell'anno 2185.
-        </p>
-        <p>
-          TheJ3niThor non è un eroe. È un sopravvissuto, un hacker, forse un residuo umano in un mondo che non lo è più.
-        </p>
-      </section>
-
-      <section id="formato">
-        <h2>Formato e Struttura</h2>
-        <p>
-          Le voci del diario seguono una struttura non lineare. Ogni testo è datato con coordinate temporali locali,
-          talvolta distorte. Le riflessioni sono scritte in prima persona, spesso interrotte da glitch, errori di sistema
-          o frammenti di codice.
-        </p>
-        <ul>
-          <li>Formati: testuali puri, monologhi interiori, estratti da log vocali</li>
-          <li>Toni: introspettivo, disilluso, critico</li>
-          <li>Temi: controllo, solitudine, resistenza urbana</li>
-        </ul>
-      </section>
-
-      <section id="contatti">
-        <h2>Contatti</h2>
-        <p>
-          Per collaborazioni o domande crittate, puoi scrivere a <a href="mailto:thej3nithor@cybermail.net">thej3nithor@cybermail.net</a>.
-        </p>
-      </section>
-
-      <section id="voci">
-        <h2>Voci del Diario</h2>
-        <p>
-          Accesso alle trascrizioni attualmente decriptate:
-        </p>
-        <ul>
-          <li><a href="/diario/entry-001.html">001 – Interferenze su Banda Neurale</a></li>
-          <li><a href="/diario/entry-002.html">002 – Strade senza ombra</a></li>
-          <li><a href="/diario/entry-003.html">003 – Ricordi sintetici</a></li>
-          <!-- Altre voci -->
-        </ul>
-      </section>
-    </article>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>
-      &copy; 2185 TheJ3niThor. Ambientazione ispirata a Carbon 2185 &copy; Dragon Turtle Games. Questo è un progetto narrativo non ufficiale.
-    </p>
-  </div>
-</footer>
+  <h1>Benvenuto nel Progetto 800A</h1>
 </body>
 </html>
