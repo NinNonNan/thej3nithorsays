@@ -1,36 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TheJ3niThor says... Diario di guerra e riflessioni future." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TheJ3niThor says...</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <h1>TheJ3niThor says...</h1>
     <p>Diario di guerra e riflessioni future</p>
   </header>
 
+  <!-- Menu a comparsa -->
+  <nav id="mobile-menu">
+    <ul>
+      <li><a href="#entry1">Entry #001</a></li>
+      <li><a href="#entry2">Entry #002</a></li>
+      <li><a href="#entry3">Entry #003</a></li>
+      <li><a href="#entry4">Entry #004</a></li>
+      <li><a href="#entry5">Entry #005</a></li>
+      <li><a href="#entry6">Entry #006</a></li>
+      <li><a href="#entry7">Entry #007</a></li>
+      <li><a href="#entry8">Entry #008</a></li>
+      <li><a href="#entry9">Entry #009</a></li>
+      <li><a href="#entry10">Entry #010</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section class="entry">
+    <section class="entry" id="entry1">
       <h2>Entry #001: Primo contatto</h2>
-      <p><strong>TheJ3niThor:</strong> "Pioveva metallo. Non era previsto. Ma chi pianifica più, ormai?"</p>
+      <p><span class="typing-effect">Pioveva metallo. Non era previsto. Ma chi pianifica più, ormai?</span></p>
     </section>
 
-    <section class="entry">
+    <section class="entry" id="entry2">
       <h2>Entry #002: Il sergente dentro</h2>
-      <p><strong>Sergente:</strong> "Fuoco di soppressione. Tu corri. Io guardo le spalle."</p>
+      <p><span class="typing-effect">Fuoco di soppressione. Tu corri. Io guardo le spalle.</span></p>
     </section>
 
-    <!-- Aggiungi altre entry qui -->
+    <section class="entry" id="entry3">
+      <h2>Entry #003: Un passo nel buio</h2>
+      <p><span class="typing-effect">Il buio era denso, come se l'aria fosse pregna di polvere e disperazione. Ogni passo che facevo mi sembrava di andare oltre il limite della mia sanità mentale.</span></p>
+    </section>
+
+    <section class="entry" id="entry4">
+      <h2>Entry #004: Pericolo dietro ogni angolo</h2>
+      <p><span class="typing-effect">Ogni suono era amplificato. I miei sensi erano in allerta, ma non riuscivo a liberarmi dalla sensazione di essere osservato, da qualcosa che si nascondeva nell'ombra.</span></p>
+    </section>
+
+    <section class="entry" id="entry5">
+      <h2>Entry #005: Il segreto svelato</h2>
+      <p><span class="typing-effect">Le informazioni che avevo trovato erano troppo scottanti. Non avrei mai pensato che ciò che stavo cercando mi avrebbe condotto a questa verità inquietante.</span></p>
+    </section>
+
+    <section class="entry" id="entry6">
+      <h2>Entry #006: Una scelta difficile</h2>
+      <p><span class="typing-effect">Mi trovavo davanti a una decisione che avrebbe cambiato tutto. Non sapevo se fare il passo giusto o se seguire il mio istinto.</span></p>
+    </section>
+
+    <section class="entry" id="entry7">
+      <h2>Entry #007: La corsa contro il tempo</h2>
+      <p><span class="typing-effect">Ogni minuto che passava sembrava una lunga ora. Il tempo stava scivolando via, e con esso ogni speranza di fermare ciò che avevo scatenato.</span></p>
+    </section>
+
+    <section class="entry" id="entry8">
+      <h2>Entry #008: Un incontro inaspettato</h2>
+      <p><span class="typing-effect">Non mi aspettavo di incrociare quella figura, ma quando i suoi occhi si sono incrociati con i miei, ho capito che dovevo essere pronto a tutto.</span></p>
+    </section>
+
+    <section class="entry" id="entry9">
+      <h2>Entry #009: La verità svelata</h2>
+      <p><span class="typing-effect">La verità è stata rivelata, ma la realtà era peggiore di qualsiasi cosa avessi potuto immaginare. Ora dovevo affrontare le conseguenze delle mie azioni.</span></p>
+    </section>
+
+    <section class="entry" id="entry10">
+      <h2>Entry #010: La fine dell'incubo?</h2>
+      <p><span class="typing-effect">Non sapevo se questa sarebbe stata la fine o solo l'inizio di un nuovo incubo. Ma una cosa era certa: non sarei mai più lo stesso.</span></p>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2185 TheJ3niThor. Tutti i diritti disintegrati.</p>
   </footer>
+
+  <script>
+    // Funzione per toggle del menu mobile
+    function toggleMenu() {
+      document.getElementById("mobile-menu").classList.toggle("show");
+    }
+  </script>
+
 </body>
 </html>
-
